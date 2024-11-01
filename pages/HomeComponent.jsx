@@ -1,16 +1,16 @@
 
-import PictureProfil from './PictureProfilComponent'
-import TitleContent from './TitleContent'
-import DescriptionComponent from './DescriptionComponent'
-import ExpertiseBoxComponent from './ExpertiseBoxComponent'
-import ExpertiseTitleComponent from './ExpertiseTitleComponent'
-import SidebarTitle from './SidebarTitle'
-import SidebarSubTittle from './SidebarSubTittle'
-import SocialNetworkComponent from './SocialNetworkComponent'
-import PersonalinfosComponent from './PersonalinfosComponent'
+import PictureProfil from '../component/PictureProfilComponent'
+import TitleContent from '../component/TitleContent'
+import HomeDescriptionComponent from '../component/HomeDescriptionComponent'
+import ExpertiseBoxComponent from '../component/ExpertiseBoxComponent'
+import ExpertiseTitleComponent from '../component/ExpertiseTitleComponent'
+import SidebarTitle from '../component/SidebarTitle'
+import SidebarSubTittle from '../component/SidebarSubTittle'
+import SocialNetworkComponent from '../component/SocialNetworkComponent'
+import PersonalinfosComponent from '../component/PersonalinfosComponent'
 
 
-export default function SidebarContainer() {
+export default function HomeComponent() {
 
   const Description = ` Hi ! . Ich heiße El Marzouki Otman . Nach ein paar Jahre im Bereich Luftfahrt als Fluggerätelektroniker habe ich mich dafür entschieden , einen anderen Weg einzuschlagen .
    Ich habe eine zweijährige Ausbildung im Bereich IT gemacht und auch in meiner Freizeit habe ich mich weiteretwicklt . Durch zwei Praktika konnte ich Erfahrung sowohl in Mobileentwicklung als auch in Webentichklung sammeln.`
@@ -51,7 +51,7 @@ export default function SidebarContainer() {
         <main className="md:w-2/3 lg:w-3/4 px-5 py-10 flex flex-col rounded-2xl bg-black space-y-10">
 
           <TitleContent title="Über Mich" />
-          <DescriptionComponent description={Description} />
+          <HomeDescriptionComponent description={Description} />
           <h1 className="text-2xl font-bold justify-center ">Was ich mache !</h1>
           <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8' >
             <div className='  flex flex-col border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  py-2  md:w-full sm:w-full '>

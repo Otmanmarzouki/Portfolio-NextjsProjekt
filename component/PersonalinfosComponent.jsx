@@ -7,7 +7,7 @@ export default function SidebarSubTittle(props) {
     return (
     <>
             
-                <div className="flex flex-col justify-center bg-gray-900 rounded-lg p-2  space-y-4">
+                <div className="flex flex-col justify-center bg-gray-900 rounded-lg p-4  space-y-4">
                     
                     <div className=" flex flex-row space-x-2 ">
                        <div className='bg-black  flex py-2 w-10  justify-center items-center rounded-lg hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white'>

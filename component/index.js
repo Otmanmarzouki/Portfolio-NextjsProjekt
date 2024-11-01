@@ -1,10 +1,11 @@
 
 
-import SidebarContainer from './Components/SidebarContainer'
-import ResumeComponent from './Components/ResumeComponent'
-import PortfolioComponent from './Components/PortfolioComponent'
 
-import bgtwo from './Photos/bgtwo.jpg'
+import ResumeComponent from '../pages/ResumeComponent'
+import PortfolioComponent from '../pages/PortfolioComponent'
+import HomeComponent from '../pages/HomeComponent'
+import ContactComponent from '../pages/ContactComponent'
+import bgtwo from './Components/background/bgtwo.jpg'
 
 
 
@@ -18,10 +19,8 @@ export default function Home() {
     backgroundRepeat: 'repeat',
     }}>
       
-   
-     
 
-   <ResumeComponent/>
+   <PortfolioComponent/>
  
     </main>
   )

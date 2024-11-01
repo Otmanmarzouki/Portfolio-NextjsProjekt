@@ -1,14 +1,14 @@
 
-import PictureProfil from './PictureProfilComponent'
-import TitleContent from './TitleContent'
+import PictureProfil from '../component/PictureProfilComponent'
+import TitleContent from '../component/TitleContent'
 
-import ResumeTitleComponent from './ResumeTitleComponent'
-import ResumeBoxComponent from './ResumeBoxComponent'
+import ResumeTitleComponent from '../component/ResumeTitleComponent'
+import ResumeBoxComponent from '../component/ResumeBoxComponent'
 
-import SidebarTitle from './SidebarTitle'
-import SidebarSubTittle from './SidebarSubTittle'
-import SocialNetworkComponent from './SocialNetworkComponent'
-import PersonalinfosComponent from './PersonalinfosComponent'
+import SidebarTitle from '../component/SidebarTitle'
+import SidebarSubTittle from '../component/SidebarSubTittle'
+import SocialNetworkComponent from '../component/SocialNetworkComponent'
+import PersonalinfosComponent from '../component/PersonalinfosComponent'
 
 
 export default function ResumeComponent() {
@@ -24,7 +24,7 @@ export default function ResumeComponent() {
       <div className='h-44'></div>
 
       <div className=" my-5 w-full flex flex-col md:flex-row md:space-x-10 md:space-y-0">
-        <aside className="bg-black  px-5  rounded-2xl  ">
+        <aside className="bg-black  px-5 rounded-2xl ">
           <div className='relative '>
             <div className=" w-48 absolute left-[50%]  transform -translate-x-[50%] drop-shadow-xl mx-auto -mt-[120px]">
               <PictureProfil />
@@ -46,22 +46,21 @@ export default function ResumeComponent() {
         </aside>
         <main className="md:w-2/3 lg:w-3/4 px-5 py-10 flex flex-col rounded-2xl bg-black space-y-10">
 
-          <TitleContent title="Portfolio" />
+          <TitleContent title="Lebenslauf" />
           
           
           <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8' >
             <div className='  flex flex-col  md:w-full sm:w-full  space-y-4'>
               <ResumeTitleComponent RsumeIcon={educationIcon} ResumeTitle='Schule & Studium' />
-              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  py-2'>
+              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  '>
                 <ResumeBoxComponent  ResumeDate='09.2015 – 06.2017' ResumePoste='IT-Entwickler' ResumeDescription='Ich lernte verschiedene Programmiersprachen „JAVA SE, PHP“.' />
-
               </div>
-              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  py-2'>
+              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  '>
                 <ResumeBoxComponent  ResumeDate='09.2010 – 09.2013' ResumePoste='Ausbildung als Fluggeräteelektroniker' ResumeDescription='' />
 
               </div>
-              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  py-2'>
-                <ResumeBoxComponent  ResumeDate='09.2008 – 06.2009' ResumePoste='Abitur: Physik und Chemie' ResumeDescription='' />
+              <div className=' w-full  border  border-gray-700 shadow-sm shadow-gray-700 rounded-lg  '>
+                <ResumeBoxComponent  ResumeDate='09.2008 – 06.2009' ResumePoste='Abitur : Physik und Chemie' ResumeDescription='' />
 
               </div>
 
