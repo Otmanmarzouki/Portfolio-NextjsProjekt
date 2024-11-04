@@ -1,59 +1,45 @@
+import { MdOutlinePhoneIphone } from 'react-icons/md';
+import { ImLocation } from 'react-icons/im';
+import { MdAlternateEmail } from 'react-icons/md';
+import { BsFillCalendarWeekFill } from 'react-icons/bs';
 
-import {MdOutlinePhoneIphone} from 'react-icons/md'
-import {ImLocation} from 'react-icons/im'
-import {MdAlternateEmail} from 'react-icons/md'
-import {BsFillCalendarWeekFill} from 'react-icons/bs'
-export default function SidebarSubTittle(props) {
-    return (
-    <>
-            
-                <div className="flex flex-col justify-center bg-gray-900 rounded-lg p-4  space-y-4">
-                    
-                    <div className=" flex flex-row space-x-2 ">
-                       <div className='bg-black  flex py-2 w-10  justify-center items-center rounded-lg hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white'>
-                        <MdOutlinePhoneIphone/>
-                        
-                       </div>
-                       <div className='flex flex-col'>
-                        <span className='text-xs font-semibold text-gray-500'>Handy</span>
-                        <span className='font-semibold '>+212644469203</span>
-                       </div>
-                    </div>
-                    <div className=" flex flex-row space-x-2">
-                    <div className='bg-black flex py-2 w-10 justify-center items-center  rounded-lg hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white'>
-                        <ImLocation/>
-                        
-                       </div>
-                       <div className='flex flex-col'>
-                        <span className='text-xs font-semibold text-gray-500'>Ort</span>
-                        <span className='text-sm font-semibold '>Meknes.Marokko</span>
-                       </div>
-                       
-                    </div>
-                    <div className=" flex flex-row space-x-2 ">
-                    <div className='bg-black flex py-2  w-10 justify-center items-center  rounded-lg hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white'>
-                        <MdAlternateEmail/>
-                        
-                       </div>
-                       <div className='flex flex-col'>
-                        <span className='text-xs font-semibold text-gray-500'>Email</span>
-                        <span className=' text-sm font-semibold '>Marzouki53@gmail.com</span>
-                       </div>
-                       
-                    </div >
-                    <div className=" flex flex-row  space-x-2">
-                    <div className='bg-black flex py-2  justify-center items-center  rounded-lg w-10 hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white'>
-                        <BsFillCalendarWeekFill/>
-                       </div>
-                       <div className='flex flex-col'>
-                        <span className='text-xs font-semibold text-gray-500'>Geburtstag</span>
-                        <span className=' text-sm font-semibold '>07-11-1991</span>
-                       </div>
-                       
-                    </div>
+export default function SidebarSubTittle() {
+  const details = [
+    {
+      icon: <MdOutlinePhoneIphone />,
+      label: 'Handy',
+      value: '+212644469203',
+    },
+    {
+      icon: <ImLocation />,
+      label: 'Ort',
+      value: 'Meknes, Marokko',
+    },
+    {
+      icon: <MdAlternateEmail />,
+      label: 'Email',
+      value: 'Marzouki53@gmail.com',
+    },
+    {
+      icon: <BsFillCalendarWeekFill />,
+      label: 'Geburtstag',
+      value: '07-11-1991',
+    },
+  ];
 
-                </div>
-                
-        </>
-    )
-  }
+  return (
+    <div className="flex flex-col  bg-gray-900 rounded-lg p-3 gap-2 ">
+      {details.map((item, index) => (
+        <div key={index} className="flex items-center space-x-2">
+          <div className="bg-black p-3 rounded-lg text-white transition duration-300 ease-in-out hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]">
+            {item.icon}
+          </div>
+          <div className="flex flex-col ">
+            <span className="text-xs font-semibold text-gray-500">{item.label}</span>
+            <span className=" text-xs">{item.value}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
