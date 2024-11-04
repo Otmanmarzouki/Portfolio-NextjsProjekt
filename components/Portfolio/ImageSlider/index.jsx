@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function ImageSlider({ slides }) {
-  const [CurrentIndex, setCurrentIndex] = useState(0);
+  const [CurrentIndex, setCurrentIndex] = useState(1);
   const SlideStyles = {
     width: '100%',
     height: '250px',

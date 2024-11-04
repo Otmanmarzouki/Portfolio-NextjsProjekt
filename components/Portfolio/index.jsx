@@ -20,16 +20,17 @@ export default function MainContent() {
     if (openTab === 1) {
       return (
         <>
-          <PorfolioItem title="Verein Verwaltung" subtitle="Dashboard" slides={WebAppFotos} />
-          <PorfolioItem title="Kosmetische App" subtitle="Palmarosa" slides={MobileAppFotos} />
+          <PorfolioItem key="web-app" title="Verein Verwaltung" subtitle="Dashboard" slides={WebAppFotos} />
+          <PorfolioItem key="mobile-app" title="Kosmetische App" subtitle="Palmarosa" slides={MobileAppFotos} />
         </>
       );
     } else if (openTab === 2) {
-      return <PorfolioItem title="Verein Verwaltung" subtitle="Dashboard" slides={WebAppFotos} />;
+      return <PorfolioItem key="web-app" title="Verein Verwaltung" subtitle="Dashboard" slides={WebAppFotos} />;
     } else if (openTab === 3) {
-      return <PorfolioItem title="Kosmetische App" subtitle="Palmarosa" slides={MobileAppFotos} />;
+      return <PorfolioItem key="mobile-app" title="Kosmetische App" subtitle="Palmarosa" slides={MobileAppFotos} />;
     }
   };
+  
 
   return (
     <section className="flex flex-col items-center w-full p-6 max-w-4xl bg-black rounded-2xl space-y-5">

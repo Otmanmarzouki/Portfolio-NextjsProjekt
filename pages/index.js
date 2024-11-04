@@ -5,7 +5,7 @@ import ResumeComponent from './ResumeComponent'
 import PortfolioComponent from './portfolio'
 import HomeComponent from './HomeComponent'
 import ContactComponent from './ContactComponent'
-import bgtwo from './Components/background/bgtwo.jpg'
+
 
 
 
