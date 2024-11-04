@@ -1,15 +1,15 @@
  import { useState } from 'react'
-import PictureProfil from '../component/PictureProfilComponent'
-import TitleContent from '../component/TitleContent'
+import PictureProfil from '../components/PictureProfilComponent'
+import TitleContent from '../components/TitleContent'
 
-import ContactBoxComponent from '../component/ContactBoxComponent'
-import SidebarTitle from '../component/SidebarTitle'
-import SidebarSubTittle from '../component/SidebarSubTittle'
-import SocialNetworkComponent from '../component/SocialNetworkComponent'
-import PersonalinfosComponent from '../component/PersonalinfosComponent'
-import InputComponent from '../component/InputComponent'
-import EmailTitleComponent from '../component/EmailTitleComponent'
-import EmailSubmitButtonComponent from '../component/EmailSubmitButtonComponent'
+import ContactBoxComponent from '../components/ContactBoxComponent'
+import SidebarTitle from '../components/SidebarTitle'
+import SidebarSubTittle from '../components/SidebarSubTittle'
+import SocialNetworkComponent from '../components/SocialNetworkComponent'
+import PersonalinfosComponent from '../components/PersonalinfosComponent'
+import InputComponent from '../components/InputComponent'
+import EmailTitleComponent from '../components/EmailTitleComponent'
+import EmailSubmitButtonComponent from '../components/EmailSubmitButtonComponent'
 
 
 

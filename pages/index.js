@@ -1,10 +1,10 @@
 
 
 
-import ResumeComponent from '../pages/ResumeComponent'
-import PortfolioComponent from '../pages/PortfolioComponent'
-import HomeComponent from '../pages/HomeComponent'
-import ContactComponent from '../pages/ContactComponent'
+import ResumeComponent from './ResumeComponent'
+import PortfolioComponent from './portfolio'
+import HomeComponent from './HomeComponent'
+import ContactComponent from './ContactComponent'
 import bgtwo from './Components/background/bgtwo.jpg'
 
 

@@ -1,14 +1,14 @@
 
-import PictureProfil from '../component/PictureProfilComponent'
-import TitleContent from '../component/TitleContent'
+import PictureProfil from '../components/PictureProfilComponent'
+import TitleContent from '../components/TitleContent'
 
-import ResumeTitleComponent from '../component/ResumeTitleComponent'
-import ResumeBoxComponent from '../component/ResumeBoxComponent'
+import ResumeTitleComponent from '../components/ResumeTitleComponent'
+import ResumeBoxComponent from '../components/ResumeBoxComponent'
 
-import SidebarTitle from '../component/SidebarTitle'
-import SidebarSubTittle from '../component/SidebarSubTittle'
-import SocialNetworkComponent from '../component/SocialNetworkComponent'
-import PersonalinfosComponent from '../component/PersonalinfosComponent'
+import SidebarTitle from '../components/SidebarTitle'
+import SidebarSubTittle from '../components/SidebarSubTittle'
+import SocialNetworkComponent from '../components/SocialNetworkComponent'
+import PersonalinfosComponent from '../components/PersonalinfosComponent'
 
 
 export default function ResumeComponent() {

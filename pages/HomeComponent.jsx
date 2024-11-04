@@ -1,13 +1,13 @@
 
-import PictureProfil from '../component/PictureProfilComponent'
-import TitleContent from '../component/TitleContent'
-import HomeDescriptionComponent from '../component/HomeDescriptionComponent'
-import ExpertiseBoxComponent from '../component/ExpertiseBoxComponent'
-import ExpertiseTitleComponent from '../component/ExpertiseTitleComponent'
-import SidebarTitle from '../component/SidebarTitle'
-import SidebarSubTittle from '../component/SidebarSubTittle'
-import SocialNetworkComponent from '../component/SocialNetworkComponent'
-import PersonalinfosComponent from '../component/PersonalinfosComponent'
+import PictureProfil from '../components/PictureProfilComponent'
+import TitleContent from '../components/TitleContent'
+import HomeDescriptionComponent from '../components/HomeDescriptionComponent'
+import ExpertiseBoxComponent from '../components/ExpertiseBoxComponent'
+import ExpertiseTitleComponent from '../components/ExpertiseTitleComponent'
+import SidebarTitle from '../components/SidebarTitle'
+import SidebarSubTittle from '../components/SidebarSubTittle'
+import SocialNetworkComponent from '../components/SocialNetworkComponent'
+import PersonalinfosComponent from '../components/PersonalinfosComponent'
 
 
 export default function HomeComponent() {

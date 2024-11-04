@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ProfilePhoto from '../Components/ProfilePicture/ProfilePhoto.jpg'
+import ProfilePhoto from '../public/Photos/ProfilePhoto.jpg'
 
 export default function PictureProfilComponent() {
   return (
