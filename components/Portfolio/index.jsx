@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TabSelector from './Tab';
 import PorfolioItem from './PorfolioItem';
+import SectionTitle from '@/commons/Title';
 
 const WebAppFotos = [
   { id: 1, img: '/Photos/1.png' },
@@ -13,7 +14,7 @@ const MobileAppFotos = [
   { id: 2, img: '/Photos/6.jpg' }
 ];
 
-export default function MainContent() {
+export default function Portfolio() {
   const [openTab, setOpenTab] = useState(1);
 
   const renderContent = () => {
@@ -33,10 +34,10 @@ export default function MainContent() {
   
 
   return (
-    <section className="flex flex-col items-center w-full p-6 max-w-4xl bg-black rounded-2xl space-y-5">
-      <h1 className="text-xl font-semibold text-white">Projekte</h1>
+    <section className="flex flex-col items-center w-full  max-w-4xl bg-black rounded-2xl space-y-5">
+     <SectionTitle text="Portfolio" />
       <TabSelector openTab={openTab} setOpenTab={setOpenTab} />
-      <div className="w-full p-2 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="w-full p-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {renderContent()}
       </div>
     </section>

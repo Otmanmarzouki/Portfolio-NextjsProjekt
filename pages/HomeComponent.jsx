@@ -1,13 +1,9 @@
 
-import PictureProfil from '../components/PictureProfilComponent'
 import TitleContent from '../components/TitleContent'
 import HomeDescriptionComponent from '../components/HomeDescriptionComponent'
 import ExpertiseBoxComponent from '../components/ExpertiseBoxComponent'
 import ExpertiseTitleComponent from '../components/ExpertiseTitleComponent'
-import SidebarTitle from '../components/SidebarTitle'
-import SidebarSubTittle from '../components/SidebarSubTittle'
-import SocialNetworkComponent from '../components/SocialNetworkComponent'
-import PersonalinfosComponent from '../components/PersonalinfosComponent'
+
 
 
 export default function HomeComponent() {
@@ -25,29 +21,8 @@ export default function HomeComponent() {
 
   return (
     <>
-      <div className='h-44'></div>
 
-      <div className=" my-5 w-full flex flex-col md:flex-row md:space-x-10 md:space-y-0">
-        <aside className="bg-black  px-5  rounded-2xl  ">
-          <div className='relative '>
-            <div className=" w-48 absolute left-[50%]  transform -translate-x-[50%] drop-shadow-xl mx-auto -mt-[120px]">
-              <PictureProfil />
-
-            </div>
-              <div className='py-20'>
-                <SidebarTitle SideBarTitle="El Marzouki Otman" />
-                <div className=' flex flex-col px-4 space-y-4'>
-                <SidebarSubTittle SidebarSubtitle="Web/Mobile Entwickler" />
-                <SocialNetworkComponent />
-                <PersonalinfosComponent />
-                 
-              </div>
-              </div>
-              
-          </div>
-
-
-        </aside>
+       
         <main className="md:w-2/3 lg:w-3/4 px-5 py-10 flex flex-col rounded-2xl bg-black space-y-10">
 
           <TitleContent title="Über Mich" />
@@ -76,7 +51,7 @@ export default function HomeComponent() {
 
         </main>
 
-      </div>
+   
 
 
 
