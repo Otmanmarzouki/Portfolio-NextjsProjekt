@@ -34,7 +34,7 @@ export default function Portfolio() {
   
 
   return (
-    <section className="flex flex-col items-center w-full  max-w-4xl bg-black rounded-2xl space-y-5">
+    <section className="flex flex-col  w-full   bg-black rounded-2xl space-y-2 p-4">
      <SectionTitle text="Portfolio" />
       <TabSelector openTab={openTab} setOpenTab={setOpenTab} />
       <div className="w-full p-4 grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -1,96 +1,110 @@
- import { useState } from 'react'
-import PictureProfil from '../components/PictureProfilComponent'
-import TitleContent from '../components/TitleContent'
-
-import ContactBoxComponent from '../components/ContactBoxComponent'
-import SidebarTitle from '../components/SidebarTitle'
-import SidebarSubTittle from '../components/SidebarSubTittle'
-import SocialNetworkComponent from '../components/SocialNetworkComponent'
-import PersonalinfosComponent from '../components/PersonalinfosComponent'
-import InputComponent from '../components/InputComponent'
-import EmailTitleComponent from '../components/EmailTitleComponent'
-import EmailSubmitButtonComponent from '../components/EmailSubmitButtonComponent'
-
-
-
+import { useState } from 'react';
+import ContactBoxComponent from '../components/ContactBoxComponent';
+import InputComponent from '../components/InputComponent';
+import EmailTitleComponent from '../components/EmailTitleComponent';
+import EmailSubmitButtonComponent from '../components/EmailSubmitButtonComponent';
+import SectionTitle from '@/commons/Title';
+import emailjs from 'emailjs-com';
 
 export default function ContactComponent() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
 
-  const serviceId = "service_b5rtnul"
-  const templateId ="template_r0310v6"
-  const publicKey = "vWEDIpw0zrVFznPUR"
-  
+  const serviceId = "service_b5rtnul";
+  const templateId = "template_r0310v6";
+  const publicKey = "vWEDIpw0zrVFznPUR";
 
+  const sendMail = () => {
+    if (!name || !email || !message) {
+      setStatusMessage("Please fill all fields.");
+      return;
+    }
 
+    setIsLoading(true);
+    setStatusMessage('');
 
- function sendMail(){
-  emailjs.send(serviceId,templateId,{
-    from_name: name,
-    to_name: "otman",
-    message: message,
-    reply_to:email ,
-    },publicKey);
- }
+    emailjs.send(serviceId, templateId, {
+      from_name: name,
+      to_name: "otman",
+      message: message,
+      reply_to: email,
+    }, publicKey)
+    .then(() => {
+      setStatusMessage('Message sent successfully!');
+      setName('');
+      setEmail('');
+      setMessage('');
+    })
+    .catch(() => {
+      setStatusMessage('Failed to send message. Please try again.');
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+  };
 
   return (
-    <>
-      <div className='h-44'></div>
-      <div className=" my-5 w-full flex flex-col md:flex-row  gap-8">
-        <aside className="bg-black  px-5 rounded-2xl ">
-          <div className='relative '>
-            <div className=" w-48 absolute left-[50%]  transform -translate-x-[50%] drop-shadow-xl mx-auto -mt-[120px]">
-              <PictureProfil />
-
-            </div>
-            <div className='py-20'>
-              <SidebarTitle SideBarTitle="El Marzouki Otman" />
-              <div className=' flex flex-col px-4 space-y-4'>
-                <SidebarSubTittle SidebarSubtitle="Web/Mobile Entwickler" />
-                <SocialNetworkComponent />
-                <PersonalinfosComponent />
-
-              </div>
-            </div>
-          </div>
-        </aside>
-        <main className="md:w-2/3 lg:w-3/4 px-5 py-10 flex flex-col rounded-2xl bg-black space-y-10">
-          <TitleContent title="Kontakt" />
-          <div className='grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mb-[40px] grid gap-x-5 gap-y-7' >
-            <ContactBoxComponent ContactTitle='Phone :' ContactDescription='+212644469203' />
-            <ContactBoxComponent ContactTitle='Email :' ContactDescription='Marzouki53@gmail.com' />
-          </div>
-          <div className='  dark:border-[#212425] dark:border-2 mb-16  md:p-[48px] p-4  rounded-xl md:mb-[60px]"'>
-          <div className='flex flex-col w-full gap-6 '>
-              
-             <EmailTitleComponent firstText='Ich bin immer offen für die Diskussion von Projekten' secondText='Designarbeit oder Partnerschaften.'/>
-            <div className='flex flex-row w-full justify-center'>
-             
-            <InputComponent name='Name' label="Name *"   value={name}  onChange={(e)=>setName(e.target.value)}/>
-            </div>
-            <div className='flex flex-row w-full justify-center'>
-            <InputComponent name='email' label="email *"  value={email}  onChange={(e)=>setEmail(e.target.value)} />
-            </div>
-            <div className='flex flex-row w-full justify-center'>
-              <InputComponent name='message' label="Message *" value={message}  onChange={(e)=>setMessage(e.target.value)} />
-            </div>
-            <div className='flex flex-row w-full justify-start'>
-              <EmailSubmitButtonComponent onClick={sendMail} />
-            </div>
-
-          </div>
-          </div>
-
-        </main>
-
+    <section className="flex flex-col w-full bg-black rounded-2xl space-y-6 p-6">
+      <SectionTitle text="Kontakt" />
+      
+      <div className="flex lg:flex-row  w-full flex-col gap-6">
+        <ContactBoxComponent ContactTitle="Phone :" ContactDescription="+212644469203" />
+        <ContactBoxComponent ContactTitle="Email :" ContactDescription="Marzouki53@gmail.com" />
       </div>
+      
+      <div className="dark:border-[#212425] dark:border-2 mb-16 p-8 rounded-xl bg-gray-800">
+        <div className="flex flex-col w-full gap-8">
+          <EmailTitleComponent 
+            firstText="Ich bin immer offen für die Diskussion von Projekten" 
+            secondText="Designarbeit oder Partnerschaften."
+          />
+          
+          <div className="flex flex-col w-full gap-6">
+            <InputComponent 
+              name="Name" 
+              label="Name *" 
+              value={name} 
+              onChange={(e) => setName(e.target.value)} 
+              required
+            />
+            <InputComponent 
+              name="email" 
+              label="Email *" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              required 
+              type="email"
+            />
+            <InputComponent 
+              name="message" 
+              label="Message *" 
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)} 
+              required
+              textarea
+            />
+          </div>
+          
+          <div className="flex justify-start">
+            <EmailSubmitButtonComponent onClick={sendMail} />
+          </div>
 
+          {statusMessage && (
+            <div 
+              className={`mt-4 ${statusMessage.includes('success') ? 'text-green-500' : 'text-red-500'} font-semibold`}
+            >
+              {statusMessage}
+            </div>
+          )}
 
-
-
-
-    </>
-  )
+          {isLoading && (
+            <div className="mt-4 text-white animate-pulse">Sending...</div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
 }

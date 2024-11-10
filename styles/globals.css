@@ -26,22 +26,21 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/* Custom scrollbar style */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #1f1f1f; /* Track color */
+  background: #1f1f1f; 
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #fa5252; /* Thumb color */
+  background-color: #fa5252; 
   border-radius: 10px;
-  border: 2px solid #1f1f1f; /* Creates padding around the thumb */
+  border: 2px solid #1f1f1f; 
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #dd2476; /* Hover color */
+  background-color: #dd2476; 
 }
