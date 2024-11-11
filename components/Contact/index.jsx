@@ -9,11 +9,11 @@ import { useForm } from '../../hooks/useForm';
 import { useStatus } from '../../hooks/useStatus';
 
 export default function ContactComponent() {
-  const { name, email, message, handleChange, resetForm } = useForm();
+const { name, email, message, handleChange, resetForm } = useForm(); 
   const { statusMessage, setStatusMessage, isLoading, setIsLoading } = useStatus();
 
   const serviceId = "service_b5rtnul";
-  const templateId = "template_r0310v6";
+  const templateId = "template_tu3jxku";
   const publicKey = "vWEDIpw0zrVFznPUR";
 
   const sendMail = () => {
@@ -52,18 +52,19 @@ export default function ContactComponent() {
       </div>
 
       <div className="dark:border-[#212425] dark:border-2 mb-16 p-8 rounded-xl bg-gray-800">
-        <div className="flex flex-col w-full gap-8">
+        <div className="flex flex-col w-full gap-6">
           <Title
             firstText="Ich bin immer offen für die Diskussion von Projekten"
             secondText="Designarbeit oder Partnerschaften."
           />
-          <div className="flex flex-col w-full gap-6">
+          <div className="flex flex-col w-full ">
+            
             <Inputs name="Name" label="Name *" value={name} onChange={handleChange} required />
-            <Inputs name="email" label="Email *" value={email} onChange={handleChange} required type="email" />
-            <Inputs name="message" label="Message *" value={message} onChange={handleChange} required textarea />
+            <Inputs name="Email" label="Email *" value={email} onChange={handleChange} required type="email" />
+            <Inputs name="Message" label="Message *" value={message} onChange={handleChange} required textarea />
           </div>
 
-          <div className="flex justify-start">
+          <div className="flex justify-end">
             <SendButton onClick={sendMail} />
           </div>
 

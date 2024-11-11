@@ -13,11 +13,11 @@ export default function Layout({ children }) {
         <Sidebar />
       </aside>
       <div className="flex-1 ml-64 flex flex-col">
-        <div className="container mx-auto w-full max-w-5xl pt-10 px-6">
+        <div className=" mx-auto w-full pt-10 px-6">
           <Header />
         </div>
         <main className="flex-1  overflow-y-auto">
-          <div className="container mx-auto w-full max-w-5xl pt-10 px-6">
+          <div className=" mx-auto w-full  pt-10 px-6">
             {children}
           </div>
         </main>
