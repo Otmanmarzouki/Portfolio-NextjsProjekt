@@ -28,15 +28,15 @@ export default function SidebarSubTittle() {
   ];
 
   return (
-    <div className="flex flex-col  bg-gray-900 rounded-lg p-3 gap-2 ">
+    <div className="flex flex-col p-7 mt-7 bg-[#1D1D1D] rounded-lg gap-2">
       {details.map((item, index) => (
         <div key={index} className="flex items-center space-x-2">
-          <div className="bg-black p-3 rounded-lg text-white transition duration-300 ease-in-out hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]">
+          <div className="flex items-center justify-center bg-black p-3 rounded-lg text-white transition duration-300 ease-in-out hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]">
             {item.icon}
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <span className="text-xs font-semibold text-gray-500">{item.label}</span>
-            <span className=" text-xs">{item.value}</span>
+            <span className="text-xs">{item.value}</span>
           </div>
         </div>
       ))}

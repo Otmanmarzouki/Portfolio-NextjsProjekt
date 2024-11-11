@@ -9,7 +9,7 @@ import { useForm } from '../../hooks/useForm';
 import { useStatus } from '../../hooks/useStatus';
 
 export default function ContactComponent() {
-const { name, email, message, handleChange, resetForm } = useForm(); 
+  const { name, email, message, handleChange, resetForm } = useForm(); 
   const { statusMessage, setStatusMessage, isLoading, setIsLoading } = useStatus();
 
   const serviceId = "service_b5rtnul";
@@ -44,36 +44,36 @@ const { name, email, message, handleChange, resetForm } = useForm();
   };
 
   return (
-    <section className="flex flex-col w-full bg-black rounded-2xl space-y-6 p-6">
+    <section className="flex flex-col w-full bg-[#111111]  rounded-2xl p-6 space-y-6">
       <SectionTitle text="Kontakt" />
-      <div className="flex lg:flex-row w-full flex-col gap-6">
-        <ContactCard ContactTitle="Phone :" ContactDescription="+212644469203" />
-        <ContactCard ContactTitle="Email :" ContactDescription="Marzouki53@gmail.com" />
+      <div className="flex flex-col lg:flex-row gap-4 w-full">
+        <ContactCard ContactTitle="Phone:" ContactDescription="+212644469203" />
+        <ContactCard ContactTitle="Email:" ContactDescription="Marzouki53@gmail.com" />
       </div>
 
-      <div className="dark:border-[#212425] dark:border-2 mb-16 p-8 rounded-xl bg-gray-800">
-        <div className="flex flex-col w-full gap-6">
+      <div className="border-[#212425] border-2 mb-16 p-6 sm:p-8 rounded-xl   ">
+        <div className="flex flex-col w-full gap-4 sm:gap-6">
           <Title
             firstText="Ich bin immer offen für die Diskussion von Projekten"
             secondText="Designarbeit oder Partnerschaften."
           />
-          <div className="flex flex-col w-full ">
-            
+          <div className="flex flex-col w-full gap-4">
             <Inputs name="Name" label="Name *" value={name} onChange={handleChange} required />
             <Inputs name="Email" label="Email *" value={email} onChange={handleChange} required type="email" />
             <Inputs name="Message" label="Message *" value={message} onChange={handleChange} required textarea />
           </div>
 
-          <div className="flex justify-end">
+        
+          <div className="flex justify-end mt-4">
             <SendButton onClick={sendMail} />
           </div>
-
           {statusMessage && (
             <div className={`mt-4 ${statusMessage.includes('success') ? 'text-green-500' : 'text-red-500'} font-semibold`}>
               {statusMessage}
             </div>
           )}
 
+        
           {isLoading && <div className="mt-4 text-white animate-pulse">Sending...</div>}
         </div>
       </div>

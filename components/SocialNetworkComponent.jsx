@@ -1,25 +1,22 @@
-import {AiFillLinkedin, AiOutlineGoogle} from 'react-icons/ai'
+import { AiFillLinkedin, AiOutlineGoogle } from 'react-icons/ai';
+import { BsGithub } from 'react-icons/bs';
 
-import {BsGithub} from 'react-icons/bs'
+export default function SidebarSubTittle() {
+  const socialMedia = [
+    { icon: <AiFillLinkedin />, link: 'https://www.linkedin.com' },
+    { icon: <AiOutlineGoogle />, link: 'https://www.google.com' },
+    { icon: <BsGithub />, link: 'https://www.github.com' }
+  ];
 
-export default function SidebarSubTittle(props) {
-    return (
-    <>
-            
-                <div className="flex flex-row space-x-4  justify-center ">
-                    
-                    <div className="py-2 flex justify-center bg-gray-900 rounded-lg w-10  hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white ">
-                        <AiFillLinkedin/>
-                    </div>
-                    <div className="py-2  flex justify-center bg-gray-900 rounded-lg  w-10 hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white">
-                    <AiOutlineGoogle/>
-                    </div>
-                    <div className="py-2 flex justify-center bg-gray-900 rounded-lg w-10  hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]   text-white">
-                    <BsGithub/>
-                    </div>
+  const iconStyle = "py-2 flex justify-center items-center bg-[#1D1D1D] rounded-lg w-10 text-white transition duration-300 ease-in-out hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef]";
 
-                </div>
-                
-        </>
-    )
-  }
+  return (
+    <div className="flex flex-row space-x-4 justify-center ">
+      {socialMedia.map((social, index) => (
+        <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className={iconStyle}>
+          {social.icon}
+        </a>
+      ))}
+    </div>
+  );
+}

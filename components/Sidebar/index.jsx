@@ -1,21 +1,19 @@
 import PictureProfil from '../PictureProfilComponent';
-import TitleContent from '../TitleContent';
 import SocialNetworkComponent from '../SocialNetworkComponent';
 import PersonalInfosComponent from '../PersonalinfosComponent'; 
 
 export default function Sidebar() {
   return (
-    <aside className="bg-black w-64 p-6 rounded-2xl h-full md:h-screen flex flex-col items-center space-y-2 overflow-y-auto custom-scrollbar">
-      <div className="w-40 drop-shadow-xl mt-4">
-        <PictureProfil />
-      </div>
-      <div className="text-center space-y-1">
-        <TitleContent title="El Marzouki Otmane" subtitle="Web/Mobile Entwickler" />
-      </div>
-      <div className="flex flex-col gap-4 w-full">
-        <SocialNetworkComponent />
-        <PersonalInfosComponent />
-      </div>
-    </aside>
+    <section className="flex flex-col items-center bg-[#111111] p-8 rounded-lg w-full lg:w-1/3">
+    <PictureProfil />
+    <h2 className="text-xl font-bold mt-4">El Marzouki Otmane</h2>
+    <p className="text-gray-400 mb-4">UI/UX Designer</p>
+    <div className="flex space-x-4 mb-6">
+      <SocialNetworkComponent/>
+    </div>
+    <div className="space-y-2">
+      <PersonalInfosComponent/>
+    </div>
+  </section>
   );
 }
