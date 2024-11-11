@@ -31,9 +31,9 @@ export default function Resume() {
   ];
 
   return (
-    <section className="flex flex-col  w-full max-w-5xl bg-black rounded-2xl space-y-5 p-4">
+    <section className="flex flex-col w-full bg-[#111111] rounded-2xl space-y-5 p-4">
  <SectionTitle text="Lebenslauf" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-4">
+      <div className="flex gap-8 p-4">
         <ResumeSection icon={educationIcon} title="Schule & Studium" items={educationData} />
         <ResumeSection icon={experienceIcon} title="Berufliche Stationen" items={experienceData} />
       </div>

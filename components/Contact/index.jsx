@@ -44,7 +44,7 @@ export default function ContactComponent() {
   };
 
   return (
-    <section className="flex flex-col w-full bg-[#111111]  rounded-2xl p-6 space-y-6">
+    <section className="flex flex-col w-full bg-[#111111]  rounded-2xl space-y-5 p-4">
       <SectionTitle text="Kontakt" />
       <div className="flex flex-col  w-full lg:flex-row gap-4 ">
         <ContactCard ContactTitle="Phone:" ContactDescription="+212644469203" />

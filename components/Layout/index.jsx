@@ -1,7 +1,6 @@
 import Header from '../Header/index';
 import Sidebar from '../Sidebar/index';
 
-
 export default function Layout({ children }) {
   return (
     <div
@@ -14,12 +13,13 @@ export default function Layout({ children }) {
       }}
     >
       <div className="flex flex-col w-full p-4">
-        <div className=" flex justify-end p-6">
+        <div className="flex justify-end p-6">
           <Header />
         </div>
-        <main className="flex flex-col lg:flex-row gap-10 p-6 mx-auto max-w-7xl">
-          <Sidebar/> 
-         {children}
+       
+        <main className="flex flex-col lg:flex-row gap-10 p-6 mx-10 ">
+        <Sidebar /> 
+          {children}
         </main>
       </div>
     </div>
