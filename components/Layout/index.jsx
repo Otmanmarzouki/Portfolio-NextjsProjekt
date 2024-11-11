@@ -17,8 +17,8 @@ export default function Layout({ children }) {
         <div className=" flex justify-end p-6">
           <Header />
         </div>
-        <main className="flex flex-col lg:flex-row justify-center gap-10 p-6 mx-auto max-w-7xl">
-          <Sidebar /> 
+        <main className="flex flex-col lg:flex-row gap-10 p-6 mx-auto max-w-7xl">
+          <Sidebar/> 
          {children}
         </main>
       </div>

@@ -14,7 +14,7 @@ export default function TabSelector({ openTab, setOpenTab }) {
 }
 
     return (
-      <ul className="flex w-full justify-start md:justify-end flex-wrap font-medium">
+      <ul className="flex w-full justify-start md:justify-end font-medium">
         {tabs.map((tab) => (
           <li
             key={tab.id}
