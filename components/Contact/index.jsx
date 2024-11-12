@@ -8,7 +8,7 @@ import emailjs from 'emailjs-com';
 import { useForm } from '../../hooks/useForm';
 import { useStatus } from '../../hooks/useStatus';
 
-export default function ContactComponent() {
+export default function Contact() {
   const { name, email, message, handleChange, resetForm } = useForm(); 
   const { statusMessage, setStatusMessage, isLoading, setIsLoading } = useStatus();
 
