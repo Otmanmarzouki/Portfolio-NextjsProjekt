@@ -11,7 +11,7 @@ export default function Sidebar() {
     <div className="flex space-x-4 mb-6">
       <SocialNetworkComponent/>
     </div>
-    <div className="space-y-2">
+    <div className="flex w-full space-y-2">
       <PersonalInfosComponent/>
     </div>
   </section>

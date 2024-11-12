@@ -11,6 +11,7 @@
   "dependencies": {
     "autoprefixer": "10.4.14",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.11.11",
     "myportfolio": "file:",
     "next": "^13.5.6",
     "postcss": "^8.4.33",

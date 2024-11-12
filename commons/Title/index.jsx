@@ -1,15 +1,13 @@
-export default function SectionTitle({ text }) {
+export default function Title({ text }) {
   return (
-    <div className="w-full flex items-center space-x-4">
+    <div className="flex w-full items-center space-x-4">
       <h2 className="text-2xl font-bold text-white">
         {text}
       </h2>
       <div
-        className="flex-grow h-1 bg-gradient-to-r"
+        className="h-1 w-1/2"
         style={{
-          "--tw-gradient-from": "#fa5252",
-          "--tw-gradient-to": "rgba(250, 82, 82, 0)",
-          backgroundImage: "linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to))",
+          background: "linear-gradient(to right, #fa5252, transparent)",
         }}
       ></div>
     </div>
