@@ -19,16 +19,18 @@ export default function Resume() {
   );
 
   const educationData = [
-    { date: '09.2015 – 06.2017', position: 'IT-Entwickler', description: 'Ich lernte verschiedene Programmiersprachen „JAVA SE, PHP“.' },
-    { date: '09.2010 – 09.2013', position: 'Ausbildung als Fluggeräteelektroniker', description: '' },
-    { date: '09.2008 – 06.2009', position: 'Abitur : Physik und Chemie', description: '' },
+    { date: '09.2015 – 06.2017', position: 'IT-Entwickler', description: 'In zwei Jahren erwarb ich Kenntnisse in verschiedenen Programmiersprachen, darunter Java SE und PHP, und konnte so eine solide Grundlage in der Softwareentwicklung und Backend-Programmierung aufbauen.', bg: 'bg-rose-50' },
+    { date: '09.2010 – 09.2013', position: 'Ausbildung als Fluggeräteelektroniker', description: '', bg: 'bg-pink-100' },
+    { date: '09.2008 – 06.2009', position: 'Abitur : Physik und Chemie', description: '', bg: 'bg-rose-50' },
   ];
-
+  
   const experienceData = [
-    { date: '10.2021 – 12.2021', position: 'Praktikum : Full Stack Entwickler', description: '- Anwendungsprogrammierung (primär mithilfe von LARAVEL) im Kundenauftrag' },
-    { date: '10.2021 – 12.2021', position: 'Praktikum : Full Stack Entwickler', description: '- Anwendungsprogrammierung (primär mithilfe von LARAVEL) im Kundenauftrag' },
-    { date: '10.2021 – 12.2021', position: 'Praktikum : Mobile Entwickler', description: '- Erstellung einer mobilen Anwendung mit React Native' },
+    { date: '10.2021 – 12.2021', position: 'Praktikum : Full Stack Entwickler', description: '- Anwendungsprogrammierung (primär mithilfe von LARAVEL) im Kundenauftrag', bg: 'bg-sky-50' },
+    { date: '10.2021 – 12.2021', position: 'Praktikum : Full Stack Entwickler', description: '- Anwendungsprogrammierung (primär mithilfe von LARAVEL) im Kundenauftrag', bg: 'bg-indigo-100' },
+    { date: '10.2021 – 12.2021', position: 'Praktikum : Mobile Entwickler', description: '- Erstellung einer mobilen Anwendung mit React Native', bg: 'bg-sky-50' },
   ];
+  
+  
 
   return (
     <section className="flex flex-col w-full bg-white dark:bg-[#111111] rounded-2xl space-y-5 p-4">
