@@ -44,14 +44,14 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex flex-col w-full bg-[#111111]  rounded-2xl space-y-5 p-4">
+    <section className="flex flex-col w-full bg-white dark:bg-[#111111] rounded-2xl space-y-5 p-4">
       <SectionTitle text="Kontakt" />
       <div className="flex flex-col  w-full lg:flex-row gap-4 ">
-        <ContactCard ContactTitle="Phone:" ContactDescription="+212644469203" />
-        <ContactCard ContactTitle="Email:" ContactDescription="Marzouki53@gmail.com" />
+        <ContactCard ContactTitle="Phone:" ContactDescription="+212644469203" bg="bg-sky-50" />
+        <ContactCard ContactTitle="Email:" ContactDescription="Marzouki53@gmail.com" bg="bg-pink-50" />
       </div>
 
-      <div className="border-[#212425] border-2 mb-16 p-6 sm:p-8 rounded-xl   ">
+      <div className=" mb-16 p-6 sm:p-8 rounded-xl bg-[#F3F6F6] dark:bg-[#292929]  ">
         <div className="flex flex-col w-full gap-4 sm:gap-6">
           <Title
             firstText="Ich bin immer offen für die Diskussion von Projekten"
@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
 
         
-          <div className="flex justify-end mt-4">
+          <div className="flex justify-end mt-4 bg-[#F3F6F6] dark:bg-[#292929] ">
             <SendButton onClick={sendMail} />
           </div>
           {statusMessage && (

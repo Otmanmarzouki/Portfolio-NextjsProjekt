@@ -4,7 +4,7 @@ export default function SendButton({ onClick, isLoading }) {
       <button
         onClick={onClick}
         disabled={isLoading} 
-        className="transition ease-in duration-200 text-sm font-semibold cursor-pointer border-color-910 hover:border-transparent px-6 py-2 rounded-lg border-[2px] hover:text-white dark:text-white"
+        className="transition ease-in duration-200 text-sm font-semibold cursor-pointer border-gray-400 hover:border-transparent px-6 py-2 rounded-lg border-[1px] hover:text-white text-gray-600 dark:text-white"
       >
         {isLoading ? "Sending..." : "Send"}
       </button>
