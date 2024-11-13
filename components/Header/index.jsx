@@ -5,7 +5,7 @@ const NavItem = ({ href, icon, label }) => {
     <li>
       <Link
         href={href}
-        className="w-16 h-16 rounded-[10px] cursor-pointer font-poppins bg-[#F3F6F6] font-medium mx-2.5 text-xs text-gray-lite dark:text-[#A6A6A6] flex flex-col items-center justify-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+        className="w-16 h-16 rounded-[10px] cursor-pointer font-poppins bg-[#F3F6F6] font-medium mx-2.5 text-xs text-gray-500 dark:text-[#A6A6A6] flex flex-col items-center justify-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
       >
         <span className="text-sm mb-1">{icon}</span>
         {label}
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       
-        <nav className="bg-black p-4 rounded-lg">
+        <nav className="  hidden lg:block p-[20px]  rounded-[16px] bg-white dark:bg-[#111111] ">
           <ul className="flex space-x-2">
             <NavItem
               href="/home"
