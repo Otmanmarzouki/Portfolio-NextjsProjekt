@@ -1,7 +1,7 @@
 export default function Title({ text }) {
   return (
     <div className="flex w-full items-center space-x-4">
-      <h2 className="text-2xl font-bold text-white">
+      <h2 className="text-2xl font-bold text-black dark:text-white">
         {text}
       </h2>
       <div

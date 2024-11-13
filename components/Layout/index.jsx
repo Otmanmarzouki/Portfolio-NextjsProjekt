@@ -29,7 +29,7 @@ export default function Layout({ children }) {
       }`}
     >
       <div className="flex flex-col w-full">
-        <div className="flex flex-row w-full items-center justify-between px-6">
+        <div className="flex flex-row w-full items-center justify-between p-6">
           <Logo />
           <button
             onClick={toggleTheme}

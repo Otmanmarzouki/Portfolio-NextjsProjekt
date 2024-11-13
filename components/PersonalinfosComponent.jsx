@@ -32,7 +32,7 @@ export default function SidebarSubTitle() {
   ];
 
   return (
-    <div className="flex flex-col w-full p-3 bg-[#F3F6F6] dark:bg-gray-700 rounded-lg gap-2">
+    <div className="flex flex-col w-full p-3 bg-[#F3F6F6] dark:bg-[#292929] rounded-lg gap-2">
       {details.map((item, index) => (
         <div key={index} className={`flex items-center space-x-2 pt-4 ${index > 0 ? 'border-t border-gray-300 dark:border-gray-600' : ''}`}>
           <div className={item.style}>
