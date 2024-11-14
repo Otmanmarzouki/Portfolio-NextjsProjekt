@@ -22,29 +22,23 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div
-      className={`flex min-h-screen text-white transition-colors duration-300 ${
-        isDarkMode ? "bg-cover bg-center bg-no-repeat bg-dark" : "bg-cover bg-center bg-no-repeat bg-light"
-      }`}
-    >
-      <div className="flex flex-col w-full gap-4">
-        <header className="flex flex-row w-full items-center justify-between p-6">
+    <div className={`flex min-h-screen transition-colors duration-300 ${isDarkMode ? "bg-dark text-white" : "bg-light text-gray-900"}`}>
+      <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4 lg:px-8">
+        <header className="flex items-center justify-between py-6">
           <Logo />
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full h-10 w-10 bg-white"
+            className="p-2 rounded-full bg-white dark:bg-gray-800 dark:text-white text-gray-600 hover:text-yellow-400"
           >
-            {isDarkMode ? (
-              <FaSun className="text-yellow-400" size={24} />
-            ) : (
-              <FaMoon className="text-gray-600" size={24} /> 
-            )}
+            {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
         </header>
-        <div className="flex mx-8">
-          <Sidebar />
-          <main className="flex flex-col gap-10 p-3 lg:mx-10 w-full">
-            <Header />
+        <div className="flex flex-col lg:flex-row gap-6 w-full">
+          <Sidebar className="lg:w-1/4 w-full" />
+          <main className="flex flex-col w-full gap-6  lg:w-3/4 lg:ml-10  rounded-lg shadow-lg">
+            <div className="flex justify-end w-full">
+              <Header />
+            </div>
             {children}
           </main>
         </div>
