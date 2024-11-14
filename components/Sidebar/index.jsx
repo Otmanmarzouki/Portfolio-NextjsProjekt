@@ -14,6 +14,13 @@ export default function Sidebar() {
     <div className="flex w-full space-y-2">
       <PersonalInfosComponent />
     </div>
+    <a
+  href="/documents/Lebenslauf.pdf"
+  download
+  className="inline-flex items-center mx-auto bg-gradient-to-r duration-200 transition ease-linear hover:bg-gradient-to-l from-[#DD2476] to-[#fa5252ef] px-8 py-2 text-sm text-white rounded-[35px] mt-6"
+>
+  CV Herunterladen
+</a>
   </section>
   );
 }

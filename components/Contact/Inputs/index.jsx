@@ -6,7 +6,7 @@ export default function Inputs({ label, name, value, onChange, required, type, t
           id={name}
           name={name}
           required={required}
-          className="block w-full text-sm bg-transparent border-0 border-b-2 border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer resize-none p-2 h-10 leading-tight"
+          className="block w-full text-sm bg-transparent border-0 border-b-2 border-[#B5B5B5] appearance-none  dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer resize-none p-2 h-10 leading-tight"
           value={value}
           onChange={onChange}
         />
@@ -16,7 +16,7 @@ export default function Inputs({ label, name, value, onChange, required, type, t
           name={name}
           type={type || 'text'}
           required={required}
-          className="block w-full text-sm bg-transparent border-0 border-b-2 border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer p-2 h-10 leading-tight"
+          className="block w-full text-sm bg-transparent border-0 border-b-2 border-[#B5B5B5] appearance-none text-gray-600 dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer p-2 h-10 leading-tight"
           value={value}
           onChange={onChange}
         />
