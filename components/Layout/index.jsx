@@ -8,7 +8,6 @@ export default function Layout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-  
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     setIsDarkMode(prefersDark);
@@ -28,8 +27,8 @@ export default function Layout({ children }) {
         isDarkMode ? "bg-cover bg-center bg-no-repeat bg-dark" : "bg-cover bg-center bg-no-repeat bg-light"
       }`}
     >
-      <div className="flex flex-col w-full">
-        <div className="flex flex-row w-full items-center justify-between p-6">
+      <div className="flex flex-col w-full gap-4">
+        <header className="flex flex-row w-full items-center justify-between p-6">
           <Logo />
           <button
             onClick={toggleTheme}
@@ -41,16 +40,14 @@ export default function Layout({ children }) {
               <FaMoon className="text-gray-600" size={24} /> 
             )}
           </button>
+        </header>
+        <div className="flex mx-8">
+          <Sidebar />
+          <main className="flex flex-col gap-10 p-3 lg:mx-10 w-full">
+            <Header />
+            {children}
+          </main>
         </div>
-        
-        <div className="flex justify-end p-6">
-          <Header />
-        </div>
-       
-        <main className="flex flex-col lg:flex-row gap-10 p-6 mx-10">
-          <Sidebar /> 
-          {children}
-        </main>
       </div>
     </div>
   );

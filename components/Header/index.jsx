@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       
-        <nav className="  hidden lg:block p-[20px]  rounded-[16px] bg-white dark:bg-[#111111] ">
+        <nav className="  hidden lg:block p-4 rounded-[16px] bg-white dark:bg-[#111111] ">
           <ul className="flex space-x-2">
             <NavItem
               href="/home"
