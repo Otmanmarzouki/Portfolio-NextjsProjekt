@@ -33,7 +33,9 @@ export default function Home() {
           bg="bg-indigo-100"
         />
       </div>
+      <div>
       <Skills/>
+      </div>
     </section>
   );
 }

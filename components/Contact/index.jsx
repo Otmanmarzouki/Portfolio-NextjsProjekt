@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ContactCard from '../Contact/ContactCard';
 import Inputs from '../Contact/Inputs';
 import Title from '../Contact/Title';
