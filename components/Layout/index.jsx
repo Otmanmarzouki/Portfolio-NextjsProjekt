@@ -34,7 +34,7 @@ export default function Layout({ children }) {
           </button>
         </header>
         <div className="flex flex-col lg:flex-row gap-6 w-full">
-          <Sidebar className="lg:w-1/4 w-full" />
+          <Sidebar className=" lg:w-1/4 w-full" />
           <main className="flex flex-col w-full gap-6  lg:w-3/4 lg:ml-10  rounded-lg shadow-lg">
             <div className="flex justify-end w-full">
               <Header />
